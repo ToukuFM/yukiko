@@ -29,7 +29,7 @@ var PomfCommand = (data, ctx, slack, callback) => {
 // SETUP ==================================================================== #
 
 var bot = new SlackBot({
-    token: 'TOP SEKRIT',
+    token: 'your slack api token here',
     name: 'U0J1BG81G',
     welcome: console.log,
     prefix: '!',
