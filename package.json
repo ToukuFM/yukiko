@@ -1,0 +1,31 @@
+{
+  "name": "yukiko",
+  "version": "0.0.1",
+  "description": "Slackbot for the ToukuFM Slack team.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToukuFM/yukiko.git"
+  },
+  "keywords": [
+    "toukufm",
+    "slack",
+    "slackbot"
+  ],
+  "author": "Bakaboykie",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ToukuFM/yukiko/issues"
+  },
+  "homepage": "https://github.com/ToukuFM/yukiko#readme",
+  "dependencies": {
+    "easy-slackbot": "0.0.7",
+    "external-ip": "^0.2.4",
+    "moment-timezone": "^0.5.0",
+    "node-nyaa-api": "0.0.1",
+    "node-toukufm-api": "0.0.6"
+  }
+}
