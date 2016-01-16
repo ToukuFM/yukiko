@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ToukuFM/yukiko#readme",
   "dependencies": {
-    "easy-slackbot": "0.0.7",
+    "easy-slackbot": "0.0.8",
     "external-ip": "^0.2.4",
     "moment-timezone": "^0.5.0",
     "node-nyaa-api": "0.0.1",

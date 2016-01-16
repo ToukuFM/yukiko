@@ -21,13 +21,17 @@ var HelpCommand = require('./lib/commands/help');
 var AnimeCommand = require('./lib/commands/anime');
 var SayCommand = require('./lib/commands/say');
 
+// Anonymous commands
+var PomfCommand = (data, ctx, slack, callback) => {
+    callback('*Wahh!* What are we gonna do on the bed?');
+};
 
 // SETUP ==================================================================== #
 
 var bot = new SlackBot({
-    token: 'xoxb-18045552050-MPghwfcuruBICzWLvS8MuJqc',
+    token: 'TOP SEKRIT',
     name: 'U0J1BG81G',
-    welcome: console.log, // TODO: change into real welcome handler
+    welcome: console.log,
     prefix: '!',
     commands: [
         new HelloCommand(),
@@ -45,10 +49,14 @@ var bot = new SlackBot({
     ],
 });
 
+// Add anonymous commands
+bot.addCommandDirectly('pomf', PomfCommand);
+
 // Initialize and connect
 bot.connect();
 
 
 // TODO:
+// - add a real welcome handler
 // - multiple word commands such as 'who made you'
 // - change HelpCommand to lookup all commands in solution
