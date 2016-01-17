@@ -22,8 +22,10 @@
   },
   "homepage": "https://github.com/ToukuFM/yukiko#readme",
   "dependencies": {
-    "easy-slackbot": "0.0.8",
+    "easy-slackbot": "0.1.0",
     "external-ip": "^0.2.4",
+    "imoji-node": "^0.1.23",
+    "irc": "^0.4.0",
     "moment-timezone": "^0.5.0",
     "node-nyaa-api": "0.0.1",
     "node-toukufm-api": "0.0.6"
