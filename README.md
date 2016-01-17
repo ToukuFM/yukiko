@@ -1,6 +1,7 @@
 # Yukiko
 
 Rewrite of the node-toukufm-slackbot in a cleaner and more consistent way.
+Based on [easy-slackbot](https://www.npmjs.com/package/easy-slackbot).
 
 ## Installation
 
