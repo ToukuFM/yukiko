@@ -4,10 +4,10 @@
 
 var slack = require('easy-slackbot');
 var SlackBot = slack.Bot;
+var touku = require('./lib/commands/touku');
 
 // COMMANDS ================================================================= #
 
-var touku = require('./lib/commands/touku');
 var ToukuScheduleCommand = touku.ToukuScheduleCommand;
 var ToukuTeamCommand = touku.ToukuTeamCommand;
 var ToukuNowPlayingCommand = touku.ToukuNowPlayingCommand;
@@ -22,6 +22,7 @@ var AnimeCommand = require('./lib/commands/anime');
 var SayCommand = require('./lib/commands/say');
 var ImojiCommand = require('./lib/commands/imoji');
 var WhisperCommand = require('./lib/commands/whisper');
+var JokeCommand = require('./lib/commands/joke');
 
 // Anonymous commands
 var PomfCommand = (data, ctx, slack, callback) => {
@@ -50,6 +51,7 @@ var slackbot = new SlackBot({
         new SayCommand(),
         new ImojiCommand(), // Imoji API Key
         new WhisperCommand(), // Channel ID
+        new JokeCommand(),
     ],
 });
 
