@@ -21,6 +21,7 @@ var HelpCommand = require('./lib/commands/help');
 var AnimeCommand = require('./lib/commands/anime');
 var SayCommand = require('./lib/commands/say');
 var ImojiCommand = require('./lib/commands/imoji');
+var WhisperCommand = require('./lib/commands/whisper');
 
 // Anonymous commands
 var PomfCommand = (data, ctx, slack, callback) => {
@@ -40,14 +41,15 @@ var slackbot = new SlackBot({
         new FaqCommand(),
         new IpCommand(),
         new WaifuCommand(),
-        new SuggestCommand(), // Replace channel ID in this file
+        new SuggestCommand(), // Channel ID
         new HelpCommand(),
         new AnimeCommand(),
         new ToukuScheduleCommand(),
         new ToukuNowPlayingCommand(),
         new ToukuTeamCommand(),
         new SayCommand(),
-        new ImojiCommand(), // Replace Imoji API in this file
+        new ImojiCommand(), // Imoji API Key
+        new WhisperCommand(), // Channel ID
     ],
 });
 
@@ -85,4 +87,3 @@ ircbot.addListener('error', function(message) {
 // - retweet command
 // - roundup integration, somehow?
 // - Send messages from slack to irc?
-// - Whisper a message through yukiko to another channel
