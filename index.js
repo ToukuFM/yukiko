@@ -30,7 +30,7 @@ var PomfCommand = (data, ctx, slack, callback) => {
 // SETUP ==================================================================== #
 
 var slackbot = new SlackBot({
-    token: 'your token here',
+    token: '',
     name: 'U0J1BG81G',
     welcome: console.log,
     prefix: '!',
@@ -70,14 +70,6 @@ ircbot.addListener("message", function(from, to, text, message) {
     slackbot.sendMsg('C0JLRQ6RY', `*${from}:* ${text}`);
 });
 
-ircbot.addListener('join', function(channel, nick, message) {
-    slackbot.sendMsg('C0JLRQ6RY', `_${nick} joined the channel._`);
-});
-
-ircbot.addListener('part', function(channel, nick, reason, message) {
-    slackbot.sendMsg('C0JLRQ6RY', `_${nick} left the channel._`);
-});
-
 ircbot.addListener('pm', function(nick, text, message) {
     slackbot.sendPM('D0J1948HZ', `*PM* from _${nick}_: ${message.command}`);
 });
@@ -93,7 +85,4 @@ ircbot.addListener('error', function(message) {
 // - retweet command
 // - roundup integration, somehow?
 // - Send messages from slack to irc?
-
-// - Add to readme: 
-//      "please note, Command.handler()'s scope is not Command."
-//      The scope is the SlackAPI instead.
+// - Whisper a message through yukiko to another channel
