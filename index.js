@@ -82,10 +82,24 @@ ircbot.addListener('error', function(message) {
     slackbot.sendMsg('C0JLRQ6RY', `*IRC Error: * \`${message}\``);
 });
 
+// Message from slack to IRC using !irc <message>
+slackbot.addCommandDirectly('irc', (data, ctx, slack, callback) => {
+    var response;
+    if (data.text.split('!irc ')[1]) response = data.text.split('!irc ')[1];
+    else if (data.text.split('irc ')[1]) response = data.text.split('irc ')[1];
+    else {
+        callback('Huh? I didn\'t quite catch that...');
+        return;
+    }
+
+    var usr = slack.getUser(data.user).name;
+    var msg = `@${usr}: ${response}`;
+    ircbot.say('#touku', msg);
+});
+
 // TODO:
 // - add a real welcome handler
 // - multiple word commands such as 'who made you'
 // - change HelpCommand to lookup all commands in solution
 // - retweet command
 // - roundup integration, somehow?
-// - Send messages from slack to irc?

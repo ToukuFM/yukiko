@@ -8,6 +8,7 @@
     "`!schedule|upcoming|sch <number>` - Show the ToukuFM schedule for the next `<number>` days.",
     "`!team` - Show the entire ToukuFM team, and links to their profile pages.",
     "`!team|member <name>` - Search for a ToukuFM member and give a link to their profile page.\n",
+    "`!irc <message>` - Send a message to the ToukuFM IRC channel. Check the responses in #irc on slack!",
 
     "_*There's always time for shenanigans, so check these out:*_",
     "`!hello` - P-please do this often, or I'll start feeling lonely :flushed:",
@@ -16,6 +17,7 @@
     "`!anime latest` - Get the latest anime from Nyaa. Support the creators by buying if you like it!",
     "`!anime search <term>` - Search for a series on Nyaa.",
     "`!waifu|ratemywaifu <waifu_name>` - I dare you, let me rate your waifu!\n",
+    "`!joke` - I'll insult your mother, for free!",
 
     "_*For serious business, here's something to help you:*_",
     "`!help` - You just used this, use it again if you forget how to do something.",
